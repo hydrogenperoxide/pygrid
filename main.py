@@ -22,9 +22,9 @@ def createCells():
             cells.append(cell)
             if column == GRID_WIDTH-1:
                 x = 0
-                y += 100
+                y += GRID_HEIGHT
             else:
-                x += 100
+                x += GRID_WIDTH
     #print(cells)
     return cells
 
