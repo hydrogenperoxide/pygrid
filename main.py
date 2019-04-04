@@ -1,15 +1,8 @@
 #!/usr/bin/python3
 
 import pygame, sys
+from const import *
 
-GRID_HEIGHT = 8
-GRID_WIDTH = 8
-CELL_HEIGHT = 100
-CELL_WIDTH = 100
-BRD_THICKNESS = 1
-BLACK = (0,0,0)
-WHITE = (255, 255, 255)
-GRAY = (90, 90, 90)
 pygame.init()
 screen = pygame.display.set_mode((CELL_WIDTH*GRID_WIDTH, CELL_HEIGHT*GRID_HEIGHT))
 
@@ -22,9 +15,9 @@ def createCells():
             cells.append(cell)
             if column == GRID_WIDTH-1:
                 x = 0
-                y += GRID_HEIGHT
+                y += CELL_HEIGHT
             else:
-                x += GRID_WIDTH
+                x += CELL_WIDTH
     #print(cells)
     return cells
 
